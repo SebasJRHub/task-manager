@@ -34,10 +34,17 @@ public class User {
     private String lastname;
 
     @Column(nullable = false)
+    @Builder.Default
+    private boolean active = true;
+
+    @Column(nullable = false)
     private LocalDateTime createdAt;
 
     @PrePersist
     protected void createdOn(){
         this.createdAt = LocalDateTime.now();
     }
+
+
+
 }
