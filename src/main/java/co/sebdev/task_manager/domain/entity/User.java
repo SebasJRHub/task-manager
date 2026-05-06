@@ -1,5 +1,6 @@
 package co.sebdev.task_manager.domain.entity;
 
+import co.sebdev.task_manager.application.dto.UserResponse;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -12,7 +13,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "users")
-public class User {
+public class User{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

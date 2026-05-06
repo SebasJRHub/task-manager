@@ -23,13 +23,14 @@ public class UserService {
     private BCryptPasswordEncoder passwordEncoder;
 
     //Este metodo me ayuda a reciclar los metodos que devuelven un *UserResponse*
-    private UserResponse toResponse(User user) {
+    public UserResponse toResponse(User user) {
         return UserResponse.builder()
                 .id(user.getId())
                 .username(user.getUsername())
                 .name(user.getName())
                 .lastname(user.getLastname())
                 .email(user.getEmail())
+                .createdAt(user.getCreatedAt())
                 .build();
     }
 
